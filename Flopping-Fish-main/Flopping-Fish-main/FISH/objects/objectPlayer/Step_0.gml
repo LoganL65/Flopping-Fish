@@ -1,0 +1,91 @@
+ysp += grav;
+
+
+
+//max horizontal spd
+if (xsp>maxHoriSpd)
+{
+	xsp=maxHoriSpd;
+}
+if (xsp<-maxHoriSpd)
+{
+	xsp=-maxHoriSpd;
+}
+
+
+
+
+if place_meeting(x,y+1,objectBlock)
+{
+	//only allow jump when grounded
+	ysp=0
+	if keyboard_check_pressed(vk_space)
+	{
+		ysp=-jumpSpd
+	}
+	//grounded movement
+	if keyboard_check_pressed(ord("A"))
+	{
+		xsp=xsp-groundSpd;
+	}
+
+	if keyboard_check_pressed(ord("D"))
+	{
+		xsp=xsp+groundSpd;
+	}
+	//horizontal friction while grounded
+	if (xsp>0)
+	{
+		xsp -=frictionSpd;
+	}
+	if (xsp<0)
+	{
+		xsp +=frictionSpd;
+	}
+	if(abs(xsp)<=frictionSpd)
+	{
+		xsp = 0;
+	}
+	
+	}else{
+	//allow faster movement in air
+	//disallow movement while dashing
+	if (dashing = 0){
+		if keyboard_check(ord("A"))
+		{
+			xsp=xsp-airSpd;
+		}
+
+		if keyboard_check(ord("D"))
+		{
+			xsp=xsp+airSpd;
+		}
+	//horizontal drag while airborn
+	
+	}
+	if (xsp>0)
+	{
+		xsp -= frictionSpd/3;
+	}
+	if (xsp<0)
+	{
+		xsp += frictionSpd/3;
+	}
+
+}
+
+//right horizonatal collision
+if (place_meeting(x+1,y,objectBlock) || place_meeting(x-1,y,objectBlock))
+{
+	xsp = ((xsp*-1)/2)
+}
+
+
+//proper head bonking 
+if place_meeting(x,y-1,objectBlock)
+{
+	ysp=grav
+}
+
+//moves the fish
+move_and_collide(xsp,ysp,objectBlock);
