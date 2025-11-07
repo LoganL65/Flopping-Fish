@@ -21,3 +21,4 @@ airSpd = 0.3;
 jumpSpd = 5;
 maxHoriSpd=7;
 frictionSpd=0.3;
+
