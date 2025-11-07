@@ -33,16 +33,21 @@ if place_meeting(x,y+1,objectBlock)
 	{
 		xsp=xsp+groundSpd;
 	}
-	//horizontal drag while grounded
+	//horizontal friction while grounded
 	if (xsp>0)
 	{
-		xsp -= frictionSpd;
+		xsp -=frictionSpd;
 	}
 	if (xsp<0)
 	{
-		xsp += frictionSpd;
+		xsp +=frictionSpd;
 	}
-}else{
+	if(abs(xsp)<=frictionSpd)
+	{
+		xsp = 0;
+	}
+	
+	}else{
 	//allow faster movement in air
 	//disallow movement while dashing
 	if (dashing = 0){
@@ -68,9 +73,19 @@ if place_meeting(x,y+1,objectBlock)
 	}
 
 }
+
+//right horizonatal collision
+if (place_meeting(x+1,y,objectBlock) || place_meeting(x-1,y,objectBlock))
+{
+	xsp = ((xsp*-1)/2)
+}
+
+
+//proper head bonking 
 if place_meeting(x,y-1,objectBlock)
 {
 	ysp=grav
 }
 
+//moves the fish
 move_and_collide(xsp,ysp,objectBlock);

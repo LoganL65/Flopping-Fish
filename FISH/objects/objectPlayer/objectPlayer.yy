@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spritePlayer",
-    "path":"sprites/spritePlayer/spritePlayer.yy",
+    "name":"spriteFish",
+    "path":"sprites/spriteFish/spriteFish.yy",
   },
   "spriteMaskId":null,
   "visible":true,

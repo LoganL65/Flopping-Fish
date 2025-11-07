@@ -25,6 +25,7 @@
     {"id":{"name":"objectPlayer","path":"objects/objectPlayer/objectPlayer.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spriteBlock","path":"sprites/spriteBlock/spriteBlock.yy",},},
+    {"id":{"name":"spriteFish","path":"sprites/spriteFish/spriteFish.yy",},},
     {"id":{"name":"spritePlayer","path":"sprites/spritePlayer/spritePlayer.yy",},},
   ],
   "resourceType":"GMProject",
