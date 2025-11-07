@@ -75,15 +75,9 @@ if place_meeting(x,y+1,objectBlock)
 }
 
 //right horizonatal collision
-if place_meeting(x+1,y,objectBlock)
+if (place_meeting(x+1,y,objectBlock) || place_meeting(x-1,y,objectBlock))
 {
-	xsp = ((xsp*-1)/2)-frictionSpd
-}
-
-//left horizontal collision
-if place_meeting(x-1,y,objectBlock)
-{
-	xsp = ((xsp*-1)/2)+frictionSpd
+	xsp = ((xsp*-1)/2)
 }
 
 
@@ -95,4 +89,3 @@ if place_meeting(x,y-1,objectBlock)
 
 //moves the fish
 move_and_collide(xsp,ysp,objectBlock);
-
