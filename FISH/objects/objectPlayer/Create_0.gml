@@ -22,7 +22,7 @@ grav = 0.3;
 //groundSpd must be a multiple of frictionSpd
 groundSpd = 2.1;
 airSpd = 0.3;
-jumpSpd = 5;
+jumpSpd = 6;
 maxHoriSpd = 8;
 maxVertSpd = 8;
 frictionSpd = 0.3;
