@@ -1,6 +1,13 @@
 {
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
+<<<<<<< Updated upstream
     {"name":"Sprite4","order":1,"path":"sprites/Sprite4/Sprite4.yy",},
+=======
+    {"name":"dirt","order":4,"path":"sprites/dirt/dirt.yy",},
+    {"name":"spriteBlock","order":2,"path":"sprites/spriteBlock/spriteBlock.yy",},
+    {"name":"spriteFish2","order":3,"path":"sprites/spriteFish2/spriteFish2.yy",},
+    {"name":"spritePlayer","order":1,"path":"sprites/spritePlayer/spritePlayer.yy",},
+>>>>>>> Stashed changes
   ],
 }

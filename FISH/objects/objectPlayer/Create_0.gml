@@ -23,9 +23,9 @@ grav = 0.3;
 groundSpd = 2.1;
 airSpd = 0.3;
 jumpSpd = 5;
-maxHoriSpd = 7;
-maxVertSpd = 7;
+maxHoriSpd = 8;
+maxVertSpd = 8;
 frictionSpd = 0.3;
-dashSpd = 7;
-dashDur = 12;
+dashSpd = 8;
+dashDur = 15;
 

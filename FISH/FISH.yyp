@@ -24,9 +24,14 @@
     {"id":{"name":"objectBlock","path":"objects/objectBlock/objectBlock.yy",},},
     {"id":{"name":"objectPlayer","path":"objects/objectPlayer/objectPlayer.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+<<<<<<< Updated upstream
     {"id":{"name":"Sprite4","path":"sprites/Sprite4/Sprite4.yy",},},
+=======
+    {"id":{"name":"dirt","path":"sprites/dirt/dirt.yy",},},
+>>>>>>> Stashed changes
     {"id":{"name":"spriteBlock","path":"sprites/spriteBlock/spriteBlock.yy",},},
     {"id":{"name":"spriteFish","path":"sprites/spriteFish/spriteFish.yy",},},
+    {"id":{"name":"spriteFish2","path":"sprites/spriteFish2/spriteFish2.yy",},},
     {"id":{"name":"spritePlayer","path":"sprites/spritePlayer/spritePlayer.yy",},},
   ],
   "resourceType":"GMProject",

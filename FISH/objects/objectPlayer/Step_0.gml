@@ -1,7 +1,5 @@
 ysp += grav;
 
-
-
 //max horizontal spd
 if (xsp>maxHoriSpd)
 {
@@ -61,7 +59,9 @@ if place_meeting(x,y+1,objectBlock)
 	}
 
 	//when in air
-	}else{
+}
+else
+{
 	//allow faster movement in air
 	//disallow movement while dashing
 	if canMove = 1
@@ -86,34 +86,104 @@ if place_meeting(x,y+1,objectBlock)
 	{
 		xsp += frictionSpd/3;
 	}
-
-}
-
-//dash
-if (keyboard_check(vk_shift) & canDash=1)
-{
-	
-	if keyboard_check(ord("W"))
+	//dash. Direction of dash is 45 degrees multiplied by value of dashDir starting north.
+	if (keyboard_check(vk_shift) & canDash=1)
 	{
-		canDash = 0;
-		global.dashing = 1;
-		dashDir = 1;
-		dashTime = dashDur
+		//initiate up dash
+		if keyboard_check(ord("W")) & !(keyboard_check(ord("A"))||keyboard_check(ord("D")))
+		{
+			canDash = 0;
+			global.dashing = 1;
+			dashDir = 1;
+			dashTime = dashDur/2;
+			grav = 0;
+		}
+		//initiate right dash
+		if keyboard_check(ord("D")) & !(keyboard_check(ord("S"))||keyboard_check(ord("W")))
+		{
+			canDash = 0;
+			global.dashing = 1;
+			dashDir = 3;
+			dashTime = dashDur;
+			grav = 0;
+		}
+		//initiate down dash
+		if keyboard_check(ord("S")) & !(keyboard_check(ord("D"))||keyboard_check(ord("A")))
+		{
+			canDash = 0;
+			global.dashing = 1;
+			dashDir = 5;
+			dashTime = dashDur;
+			grav = 0;
+		}
+		//initiate left dash
+		if keyboard_check(ord("A")) & !(keyboard_check(ord("S"))||keyboard_check(ord("W")))
+		{
+			canDash = 0;
+			global.dashing = 1;
+			dashDir = 7;
+			dashTime = dashDur;
+			grav = 0;
+		}
 	}
 }
 
-//detect when to end dash
+
+//dash stuff
 if global.dashing = 1
 {
+	//decrease dash time to act as timer
 	dashTime -= 1
-	//up
+	//dashing up
 	if dashDir = 1
 	{
+		//bonk
+		if place_meeting(x,y-1,objectBlock)
+		{
+			dashTime = 0;
+			ysp = dashSpd
+		} 
 		if ysp<dashSpd
 		{
-			ysp =- dashSpd;
+			//set spd
+			ysp = -dashSpd;
 			xsp = 0;
-			sprite_index = spritePlayer;
+			sprite_index = spriteFish2;
+		}
+		
+		if dashTime < dashDur/2
+		{
+			canMove = 1;
+			grav = 0.3;
+		}
+		
+		if dashTime < 1
+		{
+			global.dashing = 0;
+			dashDir = 0;
+			sprite_index = spriteFish;
+		}
+	}
+	//dashing right
+	if dashDir = 3
+	{
+		//bonk
+		if place_meeting(x+1,y,objectBlock)
+		{
+			dashTime = 0;
+		}
+		if xsp<dashSpd
+		{
+			//set spd
+			xsp = dashSpd;
+			ysp = 0;
+			sprite_index = spriteFish2;
+		}
+		
+		if dashTime < dashDur/2
+		{
+			canMove = 1;
+			grav = 0.3;
 		}
 		if dashTime < 1
 		{
@@ -121,7 +191,59 @@ if global.dashing = 1
 			dashDir = 0;
 			sprite_index = spriteFish;
 		}
-		if dashTime < -dashDur/2
+	}
+	//dashing down
+	if dashDir = 5
+	{
+		
+		//bonk
+		if place_meeting(x,y+1,objectBlock)
+		{
+			dashTime = 0;
+		} 
+		if ysp>-dashSpd
+		{
+			//set spd
+			ysp = dashSpd;
+			xsp = 0;
+			sprite_index = spriteFish2;
+		}
+		
+		if dashTime < dashDur/2
+		{
+			canMove = 1;
+			grav = 0.3;
+		}
+		
+		if dashTime < 1
+		{
+			global.dashing = 0;
+			dashDir = 0;
+			sprite_index = spriteFish;
+		}
+	}
+	//dashing left
+	if dashDir = 7
+	{
+		//bonk
+		if place_meeting(x-1,y,objectBlock)
+		{
+			dashTime = 0;
+		}
+		if xsp>-dashSpd
+		{
+			//set spd
+			xsp = -dashSpd;
+			ysp = 0;
+			sprite_index = spriteFish2;
+		}
+		
+		if dashTime < dashDur/2
+		{
+			canMove = 1;
+			grav = 0.3;
+		}
+		if dashTime < 1
 		{
 			global.dashing = 0;
 			dashDir = 0;
