@@ -6,6 +6,7 @@
     {"name":"HPindicator3","order":4,"path":"objects/HPindicator3/HPindicator3.yy",},
     {"name":"HPindicator4","order":5,"path":"objects/HPindicator4/HPindicator4.yy",},
     {"name":"objectWater","order":1,"path":"objects/objectWater/objectWater.yy",},
+    {"name":"oCamera","order":6,"path":"objects/oCamera/oCamera.yy",},
     {"name":"spriteBlock","order":2,"path":"sprites/spriteBlock/spriteBlock.yy",},
     {"name":"spriteDirt","order":4,"path":"sprites/spriteDirt/spriteDirt.yy",},
     {"name":"spriteDrop","order":9,"path":"sprites/spriteDrop/spriteDrop.yy",},
