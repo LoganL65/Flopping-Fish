@@ -1,4 +1,12 @@
 ysp += grav;
+global.HPcurrent -= HPdecay;
+
+if global.HPcurrent < 0
+{
+	x = xstart;
+	y = ystart;
+	global.HPcurrent = global.HPmax;
+}
 
 //max horizontal spd
 if (xsp>maxHoriSpd)
@@ -18,8 +26,17 @@ if (ysp<-maxVertSpd)
 {
 	ysp=-maxVertSpd;
 }
-
-
+//animations
+if ysp>1
+{
+	sprite_index = spriteFishRed1
+} else if ysp<-1
+{
+	sprite_index = spriteFishRed3
+} else
+{
+	sprite_index = spriteFishRed2
+}
 
 if place_meeting(x,y+1,objectBlock)
 {
@@ -86,8 +103,9 @@ else
 	{
 		xsp += frictionSpd/3;
 	}
-	//dash. Direction of dash is 45 degrees multiplied by value of dashDir starting north.
+	//dash. 
 	if (keyboard_check_pressed(vk_shift) & canDash=1)
+	//Direction of dash is 45 degrees multiplied by value of dashDir starting north.
 	{
 		//initiate up dash
 		if keyboard_check(ord("W")) & !(keyboard_check(ord("A"))||keyboard_check(ord("D")))
@@ -97,7 +115,6 @@ else
 			dashDir = 1;
 			dashTime = dashDur/2;
 			grav = 0;
-			sprite_index = spriteFish2;
 		}
 		//initiate right dash
 		if keyboard_check(ord("D")) & !(keyboard_check(ord("S"))||keyboard_check(ord("W")))
@@ -107,7 +124,6 @@ else
 			dashDir = 3;
 			dashTime = dashDur;
 			grav = 0;
-			sprite_index = spriteFish2;
 		}
 		//initiate down dash
 		if keyboard_check(ord("S")) & !(keyboard_check(ord("D"))||keyboard_check(ord("A")))
@@ -117,7 +133,6 @@ else
 			dashDir = 5;
 			dashTime = dashDur;
 			grav = 0;
-			sprite_index = spriteFish2;
 		}
 		//initiate left dash
 		if keyboard_check(ord("A")) & !(keyboard_check(ord("S"))||keyboard_check(ord("W")))
@@ -127,7 +142,6 @@ else
 			dashDir = 7;
 			dashTime = dashDur;
 			grav = 0;
-			sprite_index = spriteFish2;
 		}
 		//initiate up right dash
 		if keyboard_check(ord("W")) & keyboard_check(ord("D"))
@@ -137,7 +151,6 @@ else
 			dashDir = 2;
 			dashTime = dashDur/1.5;
 			grav = 0;
-			sprite_index = spriteFish2;
 		}
 		//initiate up left dash
 		if keyboard_check(ord("W")) & keyboard_check(ord("A"))
@@ -147,7 +160,6 @@ else
 			dashDir = 8;
 			dashTime = dashDur/1.5;
 			grav = 0;
-			sprite_index = spriteFish2;
 		}
 		//initiate down right dash
 		if keyboard_check(ord("S")) & keyboard_check(ord("D"))
@@ -157,7 +169,6 @@ else
 			dashDir = 4;
 			dashTime = dashDur;
 			grav = 0;
-			sprite_index = spriteFish2;
 		}
 		//initiate down left dash
 		if keyboard_check(ord("S")) & keyboard_check(ord("A"))
@@ -167,11 +178,9 @@ else
 			dashDir = 6;
 			dashTime = dashDur;
 			grav = 0;
-			sprite_index = spriteFish2;
 		}
 	}
 }
-
 
 //dash stuff
 if global.dashing = 1
@@ -204,7 +213,7 @@ if global.dashing = 1
 		{
 			global.dashing = 0;
 			dashDir = 0;
-			sprite_index = spriteFish;
+			
 		}
 	}
 	//dashing right
@@ -231,7 +240,6 @@ if global.dashing = 1
 		{
 			global.dashing = 0;
 			dashDir = 0;
-			sprite_index = spriteFish;
 		}
 	}
 	//dashing down
@@ -260,7 +268,6 @@ if global.dashing = 1
 		{
 			global.dashing = 0;
 			dashDir = 0;
-			sprite_index = spriteFish;
 		}
 	}
 	//dashing left
@@ -287,7 +294,6 @@ if global.dashing = 1
 		{
 			global.dashing = 0;
 			dashDir = 0;
-			sprite_index = spriteFish;
 		}
 	}
 	//dashing up right
@@ -319,7 +325,6 @@ if global.dashing = 1
 		{
 			global.dashing = 0;
 			dashDir = 0;
-			sprite_index = spriteFish;
 		}
 	}
 	//dashing up left
@@ -351,7 +356,6 @@ if global.dashing = 1
 		{
 			global.dashing = 0;
 			dashDir = 0;
-			sprite_index = spriteFish;
 		}
 	}
 	//dashing down right
@@ -383,7 +387,6 @@ if global.dashing = 1
 		{
 			global.dashing = 0;
 			dashDir = 0;
-			sprite_index = spriteFish;
 		}
 	}
 	//dashing down left
@@ -414,12 +417,10 @@ if global.dashing = 1
 		{
 			global.dashing = 0;
 			dashDir = 0;
-			sprite_index = spriteFish;
+
 		}
 	}
 }
-
-
 
 //right horizonatal collision
 if place_meeting(x+1,y,objectBlock)
@@ -436,7 +437,12 @@ if place_meeting(x-1,y,objectBlock)
 //proper head bonking 
 if place_meeting(x,y-1,objectBlock)
 {
-	ysp=grav
+	ysp = grav;
+}
+//water
+if place_meeting(x,y+2,objectWater)
+{
+	global.HPcurrent = global.HPmax;
 }
 
 //moves the fish

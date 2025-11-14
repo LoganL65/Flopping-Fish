@@ -3,8 +3,8 @@ window_set_size(2560,1480);
 window_center();
 
 //size settings
-image_xscale = 1.2;
-image_yscale = 1.2;
+image_xscale = 2;
+image_yscale = 2;
 
 
 //declaring vars
@@ -28,4 +28,6 @@ maxVertSpd = 8;
 frictionSpd = 0.3;
 dashSpd = 8;
 dashDur = 15;
-
+global.HPcurrent = 1000;
+global.HPmax = 1000;
+HPdecay = 1;

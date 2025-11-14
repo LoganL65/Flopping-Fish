@@ -1,9 +1,19 @@
 {
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
-    {"name":"dirt","order":4,"path":"sprites/dirt/dirt.yy",},
+    {"name":"HPindicator1","order":2,"path":"objects/HPindicator1/HPindicator1.yy",},
+    {"name":"HPindicator2","order":3,"path":"objects/HPindicator2/HPindicator2.yy",},
+    {"name":"HPindicator3","order":4,"path":"objects/HPindicator3/HPindicator3.yy",},
+    {"name":"HPindicator4","order":5,"path":"objects/HPindicator4/HPindicator4.yy",},
+    {"name":"objectWater","order":1,"path":"objects/objectWater/objectWater.yy",},
     {"name":"spriteBlock","order":2,"path":"sprites/spriteBlock/spriteBlock.yy",},
+    {"name":"spriteDirt","order":4,"path":"sprites/spriteDirt/spriteDirt.yy",},
+    {"name":"spriteDrop","order":9,"path":"sprites/spriteDrop/spriteDrop.yy",},
     {"name":"spriteFish2","order":3,"path":"sprites/spriteFish2/spriteFish2.yy",},
+    {"name":"spriteFishRed1","order":5,"path":"sprites/spriteFishRed1/spriteFishRed1.yy",},
+    {"name":"spriteFishRed2","order":6,"path":"sprites/spriteFishRed2/spriteFishRed2.yy",},
+    {"name":"spriteFishRed3","order":7,"path":"sprites/spriteFishRed3/spriteFishRed3.yy",},
     {"name":"spritePlayer","order":1,"path":"sprites/spritePlayer/spritePlayer.yy",},
+    {"name":"spriteWater","order":8,"path":"sprites/spriteWater/spriteWater.yy",},
   ],
 }
