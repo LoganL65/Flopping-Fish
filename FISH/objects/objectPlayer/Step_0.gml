@@ -1,7 +1,7 @@
 ysp += grav;
 global.HPcurrent -= HPdecay;
 
-if global.HPcurrent < 0
+if global.HPcurrent <= 0
 {
 	x = xstart;
 	y = ystart;
