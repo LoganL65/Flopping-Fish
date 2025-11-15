@@ -1,6 +1,7 @@
 ysp += grav;
 global.HPcurrent -= HPdecay;
 
+//DIE
 if global.HPcurrent <= 0
 {
 	x = xstart;
@@ -106,7 +107,9 @@ else
 	//dash. 
 	if (keyboard_check_pressed(vk_shift) & canDash=1)
 	//Direction of dash is 45 degrees multiplied by value of dashDir starting north.
+	
 	{
+		//these should be a function but I didnt think of that in time.
 		//initiate up dash
 		if keyboard_check(ord("W")) & !(keyboard_check(ord("A"))||keyboard_check(ord("D")))
 		{
@@ -420,7 +423,23 @@ if global.dashing = 1
 
 		}
 	}
+	image_alpha = 0.7;
 }
+else
+{
+	image_alpha = 1;
+}
+//when hit orb
+if (place_meeting(x, y, objectOrb) & global.dashing = 1)
+{
+	dashTime = 0;
+	xsp = xsp*-1.15;
+	ysp = ysp*-1.15;
+	canDash = 1;
+	global.dashing = 0;
+	grav = 0.3;
+}
+
 
 //right horizonatal collision
 if place_meeting(x+1,y,objectBlock)

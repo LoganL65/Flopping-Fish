@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spriteDrop",
-    "path":"sprites/spriteDrop/spriteDrop.yy",
+    "name":"Droplet_1",
+    "path":"sprites/Droplet_1/Droplet_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,
