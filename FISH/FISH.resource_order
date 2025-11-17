@@ -9,6 +9,8 @@
     {"name":"objectWater","order":1,"path":"objects/objectWater/objectWater.yy",},
     {"name":"oCamera","order":6,"path":"objects/oCamera/oCamera.yy",},
     {"name":"Droplet_1","order":10,"path":"sprites/Droplet_1/Droplet_1.yy",},
+    {"name":"spriteBear1","order":13,"path":"sprites/spriteBear1/spriteBear1.yy",},
+    {"name":"spriteBear2","order":14,"path":"sprites/spriteBear2/spriteBear2.yy",},
     {"name":"spriteBlock","order":2,"path":"sprites/spriteBlock/spriteBlock.yy",},
     {"name":"spriteDirt","order":4,"path":"sprites/spriteDirt/spriteDirt.yy",},
     {"name":"spriteDrop","order":9,"path":"sprites/spriteDrop/spriteDrop.yy",},
@@ -19,5 +21,6 @@
     {"name":"spriteOrb","order":11,"path":"sprites/spriteOrb/spriteOrb.yy",},
     {"name":"spritePlayer","order":1,"path":"sprites/spritePlayer/spritePlayer.yy",},
     {"name":"spriteWater","order":8,"path":"sprites/spriteWater/spriteWater.yy",},
+    {"name":"spriteWater2","order":12,"path":"sprites/spriteWater2/spriteWater2.yy",},
   ],
 }
