@@ -1,50 +1,70 @@
-if (9/10)*global.HPcurrent < global.HPcurrent <= (10/10)*global.HPmax
+if  0.9*global.HPmax < global.HPcurrent && global.HPcurrent <= 1.0*global.HPmax 
 {
-	draw_sprite(Droplet_1, 1, 50, 50) 
+	
+	sprite_index = Droplet_1;
+	image_index = 0;
 	
 }
 
-if (8/10)*global.HPcurrent < global.HPcurrent <= (9/10)*global.HPmax
+if 0.8*global.HPmax < global.HPcurrent && global.HPcurrent <= 0.9*global.HPmax 
 {
-	draw_sprite(Droplet_1, 2, 50, 50) 
+	
+	sprite_index = Droplet_2;
+	image_index = 0;
 	
 }
-if (7/10)*global.HPcurrent < global.HPcurrent <= (8/10)*global.HPmax
+if  0.7*global.HPmax < global.HPcurrent && global.HPcurrent <= 0.8*global.HPmax 
 {
-	draw_sprite(Droplet_1, 3, 50, 50) 
+	
+	sprite_index = Droplet_3;
+	image_index = 0;
 	
 }
-if (6/10)*global.HPcurrent < global.HPcurrent <= (7/10)*global.HPmax
+if  0.6*global.HPmax < global.HPcurrent && global.HPcurrent <= 0.7*global.HPmax 
 {
-	draw_sprite(Droplet_1, 4, 50, 50) 
+
+	sprite_index = Droplet_4;
+	image_index = 0;
 	
 }
-if (5/10)*global.HPcurrent < global.HPcurrent <= (6/10)*global.HPmax
+if 0.5*global.HPmax < global.HPcurrent && global.HPcurrent <= 0.6*global.HPmax 
 {
-	draw_sprite(Droplet_1, 5, 50, 50) 
+	
+	sprite_index = Droplet_5;
+	image_index = 0;
 	
 }
-if (4/10)*global.HPcurrent < global.HPcurrent <= (5/10)*global.HPmax
+if  0.4*global.HPmax < global.HPcurrent && global.HPcurrent <= 0.5*global.HPmax 
 {
-	draw_sprite(Droplet_1, 6, 50, 50) 
+	
+	sprite_index = Droplet_6;
+	image_index = 0;
 	
 }
-if (3/10)*global.HPcurrent < global.HPcurrent <= (4/10)*global.HPmax
+if 0.3*global.HPmax < global.HPcurrent && global.HPcurrent <= 0.4*global.HPmax 
 {
-	draw_sprite(Droplet_1, 7, 50, 50) 
+	
+	sprite_index = Droplet_7;
+	image_index = 0;
 	
 }
-if (2/10)*global.HPcurrent < global.HPcurrent <= (3/10)*global.HPmax
+if 0.2*global.HPmax < global.HPcurrent && global.HPcurrent <= 0.3*global.HPmax 
 {
-	draw_sprite(Droplet_1, 8, 50, 50) 
+	
+	sprite_index = Droplet_8;
+	image_index = 0;
 	
 }
-if (1/10)*global.HPcurrent < global.HPcurrent <= (2/10)*global.HPmax
+if 0.1*global.HPmax < global.HPcurrent && global.HPcurrent <= 0.2*global.HPmax 
 {
-	draw_sprite(Droplet_1, 9, 50, 50) 
+	
+	sprite_index = Droplet_9;
+	image_index = 0;
 	
 }
-else
+if 0.0*global.HPmax < global.HPcurrent && global.HPcurrent <= 0.1*global.HPmax
 {
-	draw_sprite(Droplet_1, 10, 50, 50)
+	
+	sprite_index = Droplet_10;
+	image_index = 0;
 }
