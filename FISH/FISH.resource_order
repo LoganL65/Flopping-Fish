@@ -2,6 +2,7 @@
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
     {"name":"HPindicator1","order":2,"path":"objects/HPindicator1/HPindicator1.yy",},
+    {"name":"objectBear","order":8,"path":"objects/objectBear/objectBear.yy",},
     {"name":"objectOrb","order":7,"path":"objects/objectOrb/objectOrb.yy",},
     {"name":"objectWater","order":1,"path":"objects/objectWater/objectWater.yy",},
     {"name":"oCamera","order":6,"path":"objects/oCamera/oCamera.yy",},

@@ -9,6 +9,17 @@ if global.HPcurrent <= 0
 	global.HPcurrent = global.HPmax;
 }
 
+//DONT DIE
+if invincibleTimer < 1
+{
+	global.invincible = 0;
+}
+else
+{
+	global.invincible = 1;
+	invincibleTimer -= 1;
+}
+
 //max horizontal spd
 if (xsp>maxHoriSpd)
 {
@@ -430,7 +441,7 @@ else
 	image_alpha = 1;
 }
 //when hit orb
-if (place_meeting(x, y, objectOrb) & global.dashing = 1)
+if ((place_meeting(x, y, objectOrb)||place_meeting(x, y, objectBear)) & global.dashing = 1)
 {
 	dashTime = 0;
 	xsp = xsp*-1.15;
@@ -450,6 +461,35 @@ if place_meeting(x+1,y,objectBlock)
 if place_meeting(x-1,y,objectBlock)
 {
 	xsp = ((xsp*-1)/2)+frictionSpd;
+}
+//bear collision right
+if (place_meeting(x+1, y-ysp, objectBear) && global.dashing = 0)
+{
+	xsp = -7;
+	if global.invincible = 0
+	{
+		global.invincible = 1;
+		invincibleTimer = invincibleTimerMax;
+	}
+} 
+else if (place_meeting(x-1, y-ysp, objectBear) && global.dashing = 0)
+{
+	xsp = 7;
+	if global.invincible = 0
+	{
+		global.invincible = 1;
+		invincibleTimer = invincibleTimerMax;
+	}
+}
+else if (place_meeting(x, y+1, objectBear) && global.dashing = 0)
+{
+	xsp = -4;
+	ysp = -4;
+	if global.invincible = 0
+	{
+		global.invincible = 1;
+		invincibleTimer = invincibleTimerMax;
+	}
 }
 
 

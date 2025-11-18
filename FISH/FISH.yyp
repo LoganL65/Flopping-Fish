@@ -22,6 +22,7 @@
   "name":"FISH",
   "resources":[
     {"id":{"name":"HPindicator1","path":"objects/HPindicator1/HPindicator1.yy",},},
+    {"id":{"name":"objectBear","path":"objects/objectBear/objectBear.yy",},},
     {"id":{"name":"objectBlock","path":"objects/objectBlock/objectBlock.yy",},},
     {"id":{"name":"objectOrb","path":"objects/objectOrb/objectOrb.yy",},},
     {"id":{"name":"objectPlayer","path":"objects/objectPlayer/objectPlayer.yy",},},

@@ -15,6 +15,8 @@ canDash = 0;
 dashDir = 0;
 dashTime = 0;
 canMove = 1;
+global.invincible = 0;
+invincibleTimer = 0;
 
 
 //declaring vars that are not 0
@@ -31,3 +33,4 @@ dashDur = 15;
 global.HPcurrent = 1000;
 global.HPmax = 1000;
 HPdecay = 1;
+invincibleTimerMax = 30;
