@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Droplet_1",
-    "path":"sprites/Droplet_1/Droplet_1.yy",
+    "name":"Droplet_0",
+    "path":"sprites/Droplet_0/Droplet_0.yy",
   },
   "spriteMaskId":null,
   "visible":true,
