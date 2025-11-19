@@ -27,10 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
+  "spriteId":null,
+  "spriteMaskId":{
     "name":"spriteBlock",
     "path":"sprites/spriteBlock/spriteBlock.yy",
   },
-  "spriteMaskId":null,
   "visible":true,
 }
