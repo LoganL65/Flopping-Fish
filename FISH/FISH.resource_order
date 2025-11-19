@@ -3,6 +3,7 @@
   "ResourceOrderSettings":[
     {"name":"HPindicator1","order":2,"path":"objects/HPindicator1/HPindicator1.yy",},
     {"name":"objectBear","order":8,"path":"objects/objectBear/objectBear.yy",},
+    {"name":"objectClear","order":9,"path":"objects/objectClear/objectClear.yy",},
     {"name":"objectOrb","order":7,"path":"objects/objectOrb/objectOrb.yy",},
     {"name":"objectWater","order":1,"path":"objects/objectWater/objectWater.yy",},
     {"name":"oCamera","order":6,"path":"objects/oCamera/oCamera.yy",},
@@ -20,6 +21,7 @@
     {"name":"spriteBear1","order":13,"path":"sprites/spriteBear1/spriteBear1.yy",},
     {"name":"spriteBear2","order":14,"path":"sprites/spriteBear2/spriteBear2.yy",},
     {"name":"spriteBlock","order":2,"path":"sprites/spriteBlock/spriteBlock.yy",},
+    {"name":"spriteClear","order":31,"path":"sprites/spriteClear/spriteClear.yy",},
     {"name":"spriteDrop","order":9,"path":"sprites/spriteDrop/spriteDrop.yy",},
     {"name":"spriteFishRed1","order":5,"path":"sprites/spriteFishRed1/spriteFishRed1.yy",},
     {"name":"spriteFishRed2","order":6,"path":"sprites/spriteFishRed2/spriteFishRed2.yy",},
@@ -27,7 +29,11 @@
     {"name":"spriteOrb","order":11,"path":"sprites/spriteOrb/spriteOrb.yy",},
     {"name":"spriteWater","order":8,"path":"sprites/spriteWater/spriteWater.yy",},
     {"name":"spriteWater2","order":12,"path":"sprites/spriteWater2/spriteWater2.yy",},
+    {"name":"Tree_Puddle","order":32,"path":"sprites/Tree_Puddle/Tree_Puddle.yy",},
+    {"name":"TreeBranch","order":28,"path":"sprites/TreeBranch/TreeBranch.yy",},
+    {"name":"Treebranchend","order":30,"path":"sprites/Treebranchend/Treebranchend.yy",},
     {"name":"Trunk_of_Tree_bg","order":26,"path":"sprites/Trunk_of_Tree_bg/Trunk_of_Tree_bg.yy",},
     {"name":"Trunk_of_Tree","order":25,"path":"sprites/Trunk_of_Tree/Trunk_of_Tree.yy",},
+    {"name":"Waterfall","order":29,"path":"sprites/Waterfall/Waterfall.yy",},
   ],
 }
