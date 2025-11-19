@@ -32,6 +32,7 @@
     {"name":"Tree_Puddle","order":32,"path":"sprites/Tree_Puddle/Tree_Puddle.yy",},
     {"name":"TreeBranch","order":28,"path":"sprites/TreeBranch/TreeBranch.yy",},
     {"name":"Treebranchend","order":30,"path":"sprites/Treebranchend/Treebranchend.yy",},
+    {"name":"Treebranchend3","order":33,"path":"sprites/Treebranchend3/Treebranchend3.yy",},
     {"name":"Trunk_of_Tree_bg","order":26,"path":"sprites/Trunk_of_Tree_bg/Trunk_of_Tree_bg.yy",},
     {"name":"Trunk_of_Tree","order":25,"path":"sprites/Trunk_of_Tree/Trunk_of_Tree.yy",},
     {"name":"Waterfall","order":29,"path":"sprites/Waterfall/Waterfall.yy",},
